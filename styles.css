@@ -1,0 +1,355 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #121212;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #ff4b5c;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.button {
+    background-color: #ff4b5c;
+    color: #1c1c1e;
+}
+
+.section {
+    padding: 50px;
+    background-color: #2c2c2e;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #ff4b5c;
+    margin-bottom: 20px;
+}
+
+.section .content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.section .content .text {
+    flex: 1;
+}
+
+.section .content .image {
+    flex: 1;
+}
+
+.section .content .image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-box {
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    background: url('space-effect.png') no-repeat center center/cover;
+    max-width: 300px;
+}
+
+.project-box img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.project-box h3 {
+    color: #ff4b5c;
+    margin: 10px 0;
+}
+
+.project-box p {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.project-box .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff4b5c;
+    color: #1c1c1e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-box .button:hover {
+    background-color: #e03a4b;
+}
+
+.experience {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.experience-box {
+    background-color: #1c1c1e;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    max-width: 300px;
+}
+
+.experience-box h3 {
+    color: #ff4b5c;
+}
+
+.experience-box p,
+.experience-box ul {
+    color: #e0e0e0;
+}
+
+.experience-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.experience-box li {
+    margin: 10px 0;
+}
+
+.experience-box .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff4b5c;
+    color: #1c1c1e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.experience-box .button:hover {
+    background-color: #e03a4b;
+}
+
+.tech-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tech-button {
+    background-color: #3a3a3c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #e0e0e0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.tech-button:hover {
+    background-color: #ff4b5c;
+    color: #1c1c1e;
+}
+
+.commissions {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.commission {
+    background-color: #3a3a3c;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.commission:hover {
+    transform: scale(1.05);
+}
+
+.commission h3 {
+    color: #ff4b5c;
+}
+
+.commission p {
+    color: #e0e0e0;
+}
+
+.commission ul {
+    list-style: none;
+    padding: 0;
+}
+
+.commission li {
+    margin: 10px 0;
+}
+
+.commission .button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ff4b5c;
+    color: #1c1c1e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.commission .button:hover {
+    background-color: #e03a4b;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.socials a {
+    color: #e0e0e0;
+    font-size: 2em;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #ff4b5c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: #777;
+}
+
+#resume-notice .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#resume-notice .content .text {
+    margin-top: 20px;
+}
+
+#resume-notice .content .button {
+    margin-top: 20px;
+}
+
+.notice-image {
+    max-width: 20%;  /* Adjust this value as needed */
+    height: auto;
+}
+
+button, .button {
+    padding: 10px 20px;
+    background-color: #ff4b5c;
+    color: #1c1c1e;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    background-color: #e03a4b;
+    transform: scale(1.05);
+}
+
+button:active, .button:active {
+    background-color: #d32f2f;
+    transform: scale(0.95);
+}
+
+#commission-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #2c2c2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#commission-form label {
+    color: #ff4b5c;
+}
+
+#commission-form input, 
+#commission-form textarea {
+    padding: 10px;
+    border: 1px solid #3a3a3c;
+    border-radius: 5px;
+    background-color: #1c1c1e;
+    color: #e0e0e0;
+}
+
+#commission-form button {
+    padding: 10px 15px;
+    background-color: #ff4b5c;
+    color: #1c1c1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#commission-form button:hover {
+    background-color: #e03a4b;
+}

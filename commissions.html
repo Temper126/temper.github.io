@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temper's Commissions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Temper > Commissions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="resume.html" class="button">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="commissions" class="section">
+        <h2>Commissions Plans</h2>
+        <div class="commissions">
+            <div class="commission">
+                <h3>Basic Commissions</h3>
+                <p>Base price: $15</p>
+                <ul>
+                    <li>Covers: Minecraft Plugins, Discord Bots</li>
+                    <li>Price will be increased according to the complexity of the job</li>
+                    <li>Maintenance provided FREE forever, but for updates it's $5-10 for each update.</li>
+                </ul>
+                <a href="basic_contract_form.html" class="button">Order</a>
+            </div>
+            <div class="commission">
+                <h3>Advanced Commissions</h3>
+                <p>Base price: $30</p>
+                <ul>
+                    <li>Covers: Minecraft Plugins</li>
+                    <li>Price will be increased according to the complexity of the job</li>
+                    <li>Maintenance provided FREE forever, but for updates it's $15-25 for each update.</li>
+                </ul>
+                <a href="advanced_contract_form.html" class="button">Order</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Temper. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Commissions Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Temper > Basic Commissions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="commissions.html">Commissions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="commission-form" class="section">
+        <h2>Basic Commission Form</h2>
+        <form id="commissionForm">
+            <label for="email">* Email OR Discord @</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="commission-type">Selected Commission Type</label>
+            <input type="text" id="commission-type" name="commission-type" value="Basic Commission" readonly>
+            
+            <label for="project-details">* Project Details (At least a paragraph)</label>
+            <textarea id="project-details" name="project-details" rows="6" required></textarea>
+            
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Temper. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('commissionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const commissionType = document.getElementById('commission-type').value;
+            const projectDetails = document.getElementById('project-details').value;
+
+            const request = new XMLHttpRequest();
+            request.open('POST', 'https://discord.com/api/webhooks/1258592800530890762/JZrXxRJ7bhvUTCcbuk3cp_8Bn77b_R71nLM1DK2SguCKEAXOXZQ0LJpraODIEokQklYd');
+            request.setRequestHeader('Content-type', 'application/json');
+
+            const params = {
+                username: "Commission Bot",
+                avatar_url: "temper.png",
+                embeds: [
+                    {
+                        title: "📝 New Commission Request",
+                        color: 3447003,
+                        fields: [
+                            {
+                                name: "👤 Email/Discord:",
+                                value: email,
+                                inline: true
+                            },
+                            {
+                                name: "🛠️ Commission Type:",
+                                value: commissionType,
+                                inline: true
+                            },
+                            {
+                                name: "📜 Project Details:",
+                                value: projectDetails
+                            }
+                        ],
+                        footer: {
+                            text: "Commission Bot",
+                            icon_url: "temper.png"
+                        },
+                        timestamp: new Date()
+                    }
+                ]
+            };
+
+            request.send(JSON.stringify(params));
+        });
+    </script>
+</body>
+</html>
