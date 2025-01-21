@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+# Recently Updated Portfolio Page
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +17,21 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="commissions.html">Commissions</a></li>
-                <li><a href="basic_contract_form.html" >Contact</a></li>
+                <li><a href="basic_contract_form.html">Contact</a></li>
                 <li><a href="resume.html" class="button">Resume</a></li>
             </ul>
         </nav>
     </header>
+    
+    <!-- Introduction Section -->
+    <section id="intro" class="intro-section">
+        <p>Hi, my name is</p>
+        <h1>Temper</h1>
+        <h2>Software Developer</h2>
+        <p>I'm a software engineer specializing in Game Development, Web Development, and I'm currently building and designing exceptional digital experiences. Currently, I'm focused on building, managing, and catering for player experience at InfestedStudios.</p>
+        <a href="https://github.com/Temper126" class="button"><i class="fab fa-github"></i> Visit My GitHub</a>
+    </section>
+    
     <section id="about" class="section">
         <h2>About Me</h2>
         <div class="content">
@@ -28,36 +40,47 @@
                 <p>I am an experienced developer with a strong background in 1.8 code and some experience with newer versions as well. I just recently created a custom CraftingAPI that supports version 1.7-1.21. I started learning to code back in 2013 and have taken a liking to it, using it throughout my journey to make complex plugins and things that were thought to be insane or made people think I was crazy.</p>
             </div>
             <div class="image">
-                <img src="temper.png" alt="Temper">
+                <img src="temper.png" alt="Temper" class="about-image">
             </div>
         </div>
     </section>
+    
     <section id="projects" class="section">
-        <h2>My Current Projects</h2>
-        <div class="projects">
-            <div class="project-box">
-                <img src="full_fantasy_logo.png" alt="FantasyCloud">
+        <h2>All My Projects</h2>
+        <p>Take a look at my projects, and see what all I have to offer. You never know something might catch your eye.</p>
+        <div class="project-grid">
+            <div class="project-card active">
+                <img src="full_fantasy_logo.png" alt="FantasyCloud" class="project-logo">
                 <h3>FantasyCloud</h3>
+                <span class="status active">• ACTIVE</span>
                 <p>A comprehensive Minecraft server offering various game modes and experiences.</p>
-                <p>I worked on fixing bugs for the network and maintaining the performance and stability of the servers. I also worked on making new content and updates, including:</p>
-                <ul>
-                <a href="https://discord.gg/FantasyCloud" class="button">Community</a>
+                <p>I worked on fixing bugs for the network and maintaining the performance and stability of the servers. I also worked on making new content and updates.</p>
+                <div class="project-icons">
+                    <a href="https://discord.gg/ejNtXqSWeE"><i class="fab fa-discord"></i></a>
+                </div>
             </div>
-            <div class="project-box">
-                <img src="logo.PNG" alt="InfestedPvP">
+            <div class="project-card unmaintained">
+                <img src="logo.PNG" alt="InfestedPvP" class="project-logo">
                 <h3>InfestedPvP</h3>
+                <span class="status unmaintained">• UNMAINTAINED</span>
                 <p>An exciting PvP server with unique challenges and gameplay.</p>
-                <a href="#" class="button">GitHub</a>
+                <div class="project-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
             </div>
-            <div class="project-box">
-                <img src="InfestedStudiosLogo_V2.JPEG" alt="InfestedStudios">
+            <div class="project-card development">
+                <img src="InfestedStudiosLogo_V2.JPEG" alt="InfestedStudios" class="project-logo">
                 <h3>InfestedStudios</h3>
+                <span class="status development">• DEVELOPMENT</span>
                 <p>A new and exciting project focusing on innovative game development.</p>
-                <a href="https://github.com/InfestedStudios" class="button">GitHub</a>
-                <a href="https://discord.gg/InfestedStudios" class="button">Discord</a>
+                <div class="project-icons">
+                    <a href="https://github.com/InfestedStudios"><i class="fab fa-github"></i></a>
+                    <a href="https://discord.gg/InfestedStudios"><i class="fab fa-discord"></i></a>
+                </div>
             </div>
         </div>
     </section>
+    
     <section id="experience" class="section">
         <h2>Where I've Worked</h2>
         <div class="experience">
@@ -72,6 +95,16 @@
                 <a href="https://store.fantasycloud.org" class="button">Fantasy Store</a>
             </div>
             <div class="experience-box">
+                <h3>Owner/Developer @ InfestedPvP</h3>
+                <p>April 2020 - 2023</p>
+                <ul>
+                    <li>A server similar to FantasyCloud, but was created to be experience like no other server could provide at the time.</li>
+                    <li>Various admin utility tools were created that allowed stuff to be easier than creating configs.</li>
+                    <li>Create various Discord utility tools, that allowed server to connect to Discord, players to link their accounts to their Discord's.</li>
+                </ul>
+                <a href="#" class="button">InfestedPvP</a>
+            </div>
+            <div class="experience-box">
                 <h3>Owner/Developer @ InfestedStudios</h3>
                 <p>February 2024 - Present</p>
                 <ul>
@@ -80,10 +113,11 @@
                     <li>Design and implement custom games and projects, ensuring regular updates and improvements.</li>
                     <li>Focus on creating unique and immersive gaming experiences for a wide audience to enjoy.</li>
                 </ul>
-                <a href="#" class="button">Infested</a>
+                <a href="#" class="button">InfestedStudios</a>
             </div>
         </div>
     </section>
+    
     <section id="contact" class="section">
         <h2>Contact</h2>
         <p>You can find me on these platforms:</p>
@@ -95,6 +129,7 @@
             <a href="https://youtube.com/Temper126"><i class="fab fa-youtube"></i></a>
         </div>
     </section>
+    
     <footer>
         <p>&copy; 2024 Temper. All rights reserved.</p>
     </footer>
